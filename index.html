@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ДомСтрой — Строительство бассейнов</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #f5f5f5;
+    }
+    header {
+      background-color: #005b96;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #003f63;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      margin-bottom: 20px;
+      border-radius: 6px;
+    }
+    .form-section input, .form-section button {
+      padding: 10px;
+      margin: 10px 0;
+      width: 100%;
+      max-width: 400px;
+      font-size: 16px;
+    }
+    .form-section button {
+      background-color: #005b96;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      background-color: #003f63;
+      color: white;
+      padding: 20px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 48%;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ДомСтрой</h1>
+  <p>Строительство бассейнов под ключ в Москве и области</p>
+</header>
+
+<nav>
+  <a href="#about">О компании</a>
+  <a href="#types">Виды бассейнов</a>
+  <a href="#services">Услуги</a>
+  <a href="#contact">Контакты</a>
+</nav>
+
+<section id="about">
+  <h2>О нас</h2>
+  <p>Компания "ДомСтрой" более 10 лет занимается проектированием и строительством бассейнов. Мы предлагаем профессиональный подход, современные технологии и высокое качество работ.</p>
+</section>
+
+<section id="types">
+  <h2>Виды бассейнов</h2>
+  <ul>
+    <li>Стационарные бетонные бассейны</li>
+    <li>Композитные (готовые чаши)</li>
+    <li>Скиммерные и переливные бассейны</li>
+    <li>Крытые и уличные бассейны</li>
+    <li>СПА-зоны и джакузи</li>
+  </ul>
+
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1585325701940-cc8c9e27c60f" alt="Бассейн 1">
+    <img src="https://images.unsplash.com/photo-1586484245328-9726b32fef8b" alt="Бассейн 2">
+    <img src="https://images.unsplash.com/photo-1576613104028-3c238dfc16f0" alt="Бассейн 3">
+    <img src="https://images.unsplash.com/photo-1551918120-9739cb430f0c" alt="Бассейн 4">
+  </div>
+</section>
+
+<section id="services">
+  <h2>Наши услуги</h2>
+  <ul>
+    <li>Проектирование бассейнов</li>
+    <li>Строительство "под ключ"</li>
+    <li>Монтаж оборудования и систем фильтрации</li>
+    <li>Обслуживание и ремонт бассейнов</li>
+    <li>Установка автоматических крышек и подогрева</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Контакты</h2>
+  <p><strong>Телефон:</strong> <a href="tel:+79773238730">+7 (977) 323-87-30</a></p>
+  <p><strong>Адрес:</strong> Москва, Велегож</p>
+</section>
+
+<section class="form-section">
+  <h2>Заказать обратный звонок</h2>
+  <form onsubmit="submitForm(event)">
+    <input type="tel" id="phone" placeholder="Введите ваш номер телефона" required />
+    <button type="submit">Отправить</button>
+    <p id="form-status"></p>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2025 ДомСтрой. Все права защищены.</p>
+</footer>
+
+<script>
+  function submitForm(event) {
+    event.preventDefault();
+    const phone = document.getElementById('phone').value;
+    document.getElementById('form-status').innerText = "Спасибо! Мы свяжемся с вами в ближайшее время.";
+  }
+</script>
+
+</body>
+</html>
